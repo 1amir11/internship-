@@ -6,7 +6,7 @@ from pathlib import Path
 
 from fpdf import FPDF, XPos, YPos
 
-OUT = Path(__file__).resolve().parent.parent / "outputs" / "HVIA_Task7_Final_Business_Discovery_Report.pdf"
+OUT = Path(__file__).resolve().parent.parent / "outputs" / "HVIA_Olist_Business_Discovery_Report.pdf"
 CHARTS = Path(__file__).resolve().parent.parent / "outputs" / "charts"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 

@@ -1,12 +1,9 @@
-# Outputs — charts, tables, PDFs (Tasks 1–6 locked)
+# Outputs
 
 | Path | Content |
 |------|---------|
-| `charts/01–18_*.png` | Task 1 story charts (growth, geo, delivery, reviews, retention, freight, sellers) |
-| `charts/19–23_*.png` | Tasks 2–6 charts (stage breakdown, seller risk, category risk, cohorts, financial exposure) |
-| `tables/` | 7 locked CSVs: `delivery_decomposition`, `seller_level`, `seller_decile_summary`, `category_risk`, `cohort_monthly`, `cohort_customers`, `financial_exposure` |
-| `HVIA_Task1_Olist_Preview_A_B_C_E.pdf` | Task 1 preview report (EN) |
-| `HVIA_Task1_Arabic_Understanding.pdf` | Arabic understanding copy (not the official submission) |
-| `HVIA_Task7_Final_Business_Discovery_Report.pdf` | Final integrated report (Tasks 1–6) |
+| `HVIA_Olist_Business_Discovery_Report.pdf` | **Main deliverable** — final integrated report (A–C, E–F). Rebuild: `python scripts/build_report.py` |
+| `charts/` | 23 PNGs backing the report (01–18 story, 19–23 deep dives) |
+| `tables/` | 7 CSVs from the analysis (delivery, seller, category, cohort, exposure) |
 
-Do not regenerate or overwrite without reading `../docs/locked_outputs_protection.md`. Definitions: `../docs/definitions.md`.
+Locked: do not regenerate tables/charts casually — see `../docs/locked_outputs_protection.md`. Definitions: `../docs/definitions.md`.

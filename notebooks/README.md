@@ -7,4 +7,4 @@
 
 Both resolve data via `ROOT / 'archive'` (project root = parent of `notebooks/`). Formulas/grains follow `../docs/definitions.md`.
 
-WARNING: sections 14–18 write locked Task 2–6 tables/charts. Before any rerun, read `../docs/locked_outputs_protection.md` and run `python ../scripts/locked_guard.py`.
+WARNING: sections 14–18 write locked Task 2–6 tables/charts. Before any rerun, read `../docs/locked_outputs_protection.md` and back up `../outputs/`.

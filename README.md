@@ -1,49 +1,52 @@
 # Internship — HVIA Data & AI Solutions
 
-Main repo for internship work. First case: Olist Brazilian e-commerce business discovery (Tasks 1–7).
+Olist Brazilian e-commerce business discovery: research, data analysis, and HVIA solution proposal.
 
-## How to read this repo (start here)
+## Main file (start here)
 
-1. **Report first:** open `outputs/HVIA_Task7_Final_Business_Discovery_Report.pdf` (14 pages) — sections A (company), B (dataset), C (story), E (HVIA solutions), F (outreach draft to Head of Operations). This is the whole case in one file.
-2. **Details:** `tasks/task-01-olist-business-discovery/hvia_task1_submission.md` — entry point with the same sections plus links to every artifact.
-3. **Numbers you can quote:** `docs/definitions.md` — late rule, delivered base (96,470), AOV, freight formulas, retention wording. Every chart/table follows it.
-4. **Charts:** `outputs/charts/` (23 PNGs) — the PDF tells you which figure to open for each finding (e.g. `06_delivery_vs_review_scores.png` for the 4.29 → 2.27 review drop).
-5. **Reproduce (optional):** `notebooks/olist_eda.ipynb` or `notebooks/olist_full_eda.py` after downloading the data (one command below).
+**`outputs/HVIA_Olist_Business_Discovery_Report.pdf`** (14 pages) — the whole case in one file:
 
-## Layout (only what's needed)
+| Section | Content |
+|---------|---------|
+| A | Company research (Olist model 2016–2018 + later context) |
+| B | Dataset understanding (9 tables, joins, quality) |
+| C | Analysis & business story (growth, geo, late delivery, loyalty, sellers, exposure) |
+| E | HVIA solution proposal (late-risk scoring, seller health, retention flags) |
+| F | Outreach draft (English message to Head of Operations) |
+
+## How to read the rest
+
+- **Numbers you can quote:** `docs/definitions.md` — late rule, delivered base (96,470), AOV, freight formulas, retention wording. Every chart follows it.
+- **Charts:** `outputs/charts/` (23 PNGs) — the report names the figure for each finding (e.g. `06_delivery_vs_review_scores.png` for the 4.29 → 2.27 review drop).
+- **Deep dives:** `docs/` — delivery stages, seller risk, category risk, cohorts, financial exposure.
+- **Reproduce (optional):** `notebooks/olist_eda.ipynb` or `notebooks/olist_full_eda.py` after downloading the data (below). Rebuild the PDF with `python scripts/build_report.py`.
+
+## Layout
 
 ```
-outputs/HVIA_Task7_Final_Business_Discovery_Report.pdf  # final report (read this)
-tasks/task-01-olist-business-discovery/  # submission + research + solutions
-docs/          # metric definitions + Tasks 2–6 deep dives
+outputs/HVIA_Olist_Business_Discovery_Report.pdf  # <-- main deliverable
+docs/          # definitions + analysis notes
 notebooks/     # EDA notebook + script (same logic)
-scripts/       # PDF builders + locked-output guard
-archive/       # data dictionary only — CSVs download on demand (see below)
+scripts/       # report builder (one script)
+archive/       # data dictionary only — CSVs download on demand
 references/    # upstream Kaggle notebook (attribution)
 ```
 
 ## Data (not in git)
 
-Raw CSVs (~140MB, 9 tables, orders 2016-09-04 → 2018-10-17) are excluded from versioning. To reproduce:
+Raw CSVs (~140MB, orders 2016-09-04 → 2018-10-17) are excluded from versioning:
 
 ```bash
 pip install -r requirements.txt
 python -c "import kagglehub; kagglehub.dataset_download('olistbr/brazilian-ecommerce')"
-# copy the 9 CSVs into archive/ (see archive/README.md for the file table)
-python scripts/locked_guard.py   # audit locked outputs before any rerun
+# copy the 9 CSVs into archive/ (file table in archive/README.md)
 ```
 
 Source: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce (CC BY-NC-SA 4.0).
 
-## Key findings (locked)
+## Key findings
 
 - Late: 6.8% of 96,470 delivered; reviews 4.29 (on-time) vs 2.27 (late)
 - Retention: 96.9% buy once (93,099 / 96,096)
 - Sellers: top 10% → ~67.5% of R$13.6M product revenue
 - Freight: 14.2% of total paid; AOV ~R$138
-
-## New tasks
-
-```
-tasks/task-NN-<slug>/README.md  # objective, inputs, outputs, status
-```
