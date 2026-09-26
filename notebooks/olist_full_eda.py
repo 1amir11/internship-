@@ -21,7 +21,7 @@ import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
 
-# ── DEFINITIONS (locked — see docs/definitions.md; comments only, no logic) ─
+# ── DEFINITIONS (locked — see docs/01-definitions.md; comments only, no logic) ─
 # LATE_RULE         = delivery_delta_days > 0   # primary late; .dt.days truncate
 # DELIVERED_BASE    = status=='delivered' + both delivery & estimated dates non-null  # n=96,470
 # AOV_FORMULA       = mean(groupby(order_id).price.sum())  # primary ≈ R$137.75
@@ -132,7 +132,7 @@ master = (items
 master['actual_delivery_days'] = (master['order_delivered_customer_date'] - master['order_purchase_timestamp']).dt.days
 master['estimated_delivery_days'] = (master['order_estimated_delivery_date'] - master['order_purchase_timestamp']).dt.days
 master['delivery_delta'] = (master['order_delivered_customer_date'] - master['order_estimated_delivery_date']).dt.days
-master['is_late'] = master['delivery_delta'] > 0  # LATE_RULE (item grain; delivery KPIs use order-level) — docs/definitions.md
+master['is_late'] = master['delivery_delta'] > 0  # LATE_RULE (item grain; delivery KPIs use order-level) — docs/01-definitions.md
 master['order_month'] = master['order_purchase_timestamp'].dt.to_period('M')
 
 print(f'\n  Master table: {len(master):,} rows x {master.shape[1]} columns')
@@ -203,10 +203,10 @@ print('\n' + '='*70)
 print('SECTION 3: REVENUE & PRODUCT CATEGORIES')
 print('='*70)
 
-total_revenue = items['price'].sum()  # REVENUE_BASE — docs/definitions.md
+total_revenue = items['price'].sum()  # REVENUE_BASE — docs/01-definitions.md
 total_freight = items['freight_value'].sum()
-avg_order_value = items.groupby('order_id')['price'].sum().mean()  # AOV_FORMULA — docs/definitions.md
-freight_ratio = total_freight / (total_revenue + total_freight) * 100  # FREIGHT_PRIMARY — docs/definitions.md
+avg_order_value = items.groupby('order_id')['price'].sum().mean()  # AOV_FORMULA — docs/01-definitions.md
+freight_ratio = total_freight / (total_revenue + total_freight) * 100  # FREIGHT_PRIMARY — docs/01-definitions.md
 
 print(f'  Total Product Revenue: R$ {total_revenue:,.2f}')
 print(f'  Total Freight Revenue: R$ {total_freight:,.2f}')
@@ -244,7 +244,7 @@ print('SECTION 4: DELIVERY PERFORMANCE ANALYSIS (ORDER-LEVEL)')
 print('='*70)
 
 # Build order-level delivered dataset to avoid multi-item overweighting
-# DELIVERED_BASE — docs/definitions.md
+# DELIVERED_BASE — docs/01-definitions.md
 orders_delivered = orders[orders['order_status'] == 'delivered'].dropna(
     subset=['order_delivered_customer_date', 'order_estimated_delivery_date']
 ).copy()
@@ -261,7 +261,7 @@ orders_delivered['delivery_delta'] = (
     orders_delivered['order_delivered_customer_date'] - orders_delivered['order_estimated_delivery_date']
 ).dt.days
 
-orders_delivered['is_late'] = orders_delivered['delivery_delta'] > 0  # LATE_RULE — docs/definitions.md
+orders_delivered['is_late'] = orders_delivered['delivery_delta'] > 0  # LATE_RULE — docs/01-definitions.md
 
 # Merge customer state and order financials
 orders_delivered = orders_delivered.merge(
@@ -446,7 +446,7 @@ print('\n' + '='*70)
 print('SECTION 6: CUSTOMER RETENTION & REPEAT PURCHASE')
 print('='*70)
 
-# Crude full-window one-time rate on customer_unique_id — docs/definitions.md
+# Crude full-window one-time rate on customer_unique_id — docs/01-definitions.md
 customer_orders = orders.merge(customers[['customer_id', 'customer_unique_id']], on='customer_id')
 repeat_analysis = customer_orders.groupby('customer_unique_id')['order_id'].nunique()
 
@@ -527,7 +527,7 @@ print('\n' + '='*70)
 print('SECTION 8: SELLER PERFORMANCE (PARETO ANALYSIS)')
 print('='*70)
 
-# Seller share of REVENUE_BASE (SUM(price)) — docs/definitions.md
+# Seller share of REVENUE_BASE (SUM(price)) — docs/01-definitions.md
 seller_perf = master.groupby('seller_id').agg(
     revenue=('price', 'sum'),
     orders=('order_id', 'nunique'),
@@ -738,7 +738,7 @@ for i, v in enumerate(ftr_by_cat['avg_freight_ratio'].values[::-1]):
     ax.text(v + 0.3, i, f'{v:.1f}%', va='center', fontsize=9)
 save_chart(fig, '13_freight_ratio_by_category')
 
-overall_ftr = master['freight_ratio'].mean()  # FREIGHT_MEAN_ITEM — docs/definitions.md
+overall_ftr = master['freight_ratio'].mean()  # FREIGHT_MEAN_ITEM — docs/01-definitions.md
 print(f'  Overall avg freight-to-price ratio: {overall_ftr:.1f}%')
 print(f'  Worst category: {ftr_by_cat.index[0]} ({ftr_by_cat["avg_freight_ratio"].iloc[0]:.1f}%)')
 
@@ -1112,7 +1112,7 @@ total_seller_revenue = float(seller_level['seller_revenue'].sum())
 total_seller_del_orders = int(seller_level['seller_delivered_orders'].sum())
 total_seller_late_orders = int(seller_level['seller_late_orders'].sum())
 
-# Locked Pareto shares (equal to SECTION 8 / definitions.md)
+# Locked Pareto shares (equal to SECTION 8 / 01-definitions.md)
 _seller_sorted = seller_level.sort_values('seller_revenue', ascending=False)
 top10_share = (
     _seller_sorted.head(int(n_sellers * 0.1))['seller_revenue'].sum()

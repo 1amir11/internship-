@@ -1,6 +1,6 @@
 # Category × Risk Analysis (Task 4)
 
-Category-level late delivery, freight burden, and review co-occurrence on the **locked** bases (`docs/definitions.md`). Late rule is **not** redefined: `is_late = delivery_delta_days > 0` on the delivered base (**n = 96,470**; **6,534** late orders). Revenue ranking uses **`SUM(order_items.price)`** (product GMV = **R$13,591,643.70**). Freight item ratio uses locked mean-item denominator: **`MEAN(freight / (price + freight))`**.
+Category-level late delivery, freight burden, and review co-occurrence on the **locked** bases (`docs/01-definitions.md`). Late rule is **not** redefined: `is_late = delivery_delta_days > 0` on the delivered base (**n = 96,470**; **6,534** late orders). Revenue ranking uses **`SUM(order_items.price)`** (product GMV = **R$13,591,643.70**). Freight item ratio uses locked mean-item denominator: **`MEAN(freight / (price + freight))`**.
 
 Code: `notebooks/olist_full_eda.py` → **SECTION 16: CATEGORY × RISK** (lines **1337–1755**); mirrored in `notebooks/olist_eda.ipynb` (**cells 36–37**, after SECTION 15 cells 34–35).  
 Table: `outputs/tables/category_risk.csv` · Chart: `outputs/charts/21_category_risk.png`.
@@ -218,4 +218,4 @@ Captions state item grain, threshold, n’s, and no causality.
 - **`dvds_blu_ray` ~40% freight** is real under mean-item labeling but fails the ≥100 headline filter.
 - **Pearson r** is descriptive only; not a causal or predictive claim.
 - Wording stays correlational: categories **account for** revenue shares and **show** late/freight rates; no assortment prescriptions stated as proven.
-- Tasks 1–3 outputs and `docs/definitions.md` remain locked and unchanged in substance.
+- Tasks 1–3 outputs and `docs/01-definitions.md` remain locked and unchanged in substance.

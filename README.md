@@ -8,7 +8,7 @@ Olist Brazilian e-commerce business discovery: research, data analysis, and HVIA
 
 ## How to read the PDF (in order)
 
-Read it top to bottom — each section feeds the next: company → data → story → solutions → outreach.
+Read it top to bottom — each section feeds the next: company → data → story → solutions → outreach → post.
 
 **A. Company Research** — who Olist was during the data window. Start with the Executive Summary box, then Snapshot (A.1), the 2016–2018 aggregator model (A.2), what came later for context only (A.3), the timeline (A.4), and the takeaway on how to use this in B and C (A.5).
 
@@ -22,9 +22,11 @@ Read it top to bottom — each section feeds the next: company → data → stor
 - C.5 priority spine + the P1–P7 problem register table — the 2-minute summary of the whole story
 - C.6 financial exposure → Fig C.6 (Chart 23); read the red banner first: commissions are ASSUMED scenarios (15/19/21%), not losses
 
-**E. Solution Proposal** — every solution starts from a Section C problem ("don't sell a tool"). Read the solution map (E.1), the three cores (E.2 late-risk, E.3 retention flag, E.4 seller health), the supporting layers (E.5), the side alert (E.6), build order (E.7), then the Tasks 2–6 extensions (E.8).
+**E. Solution Proposal** — every solution starts from a Section C problem ("don't sell a tool"). Read the solution map (E.1), the three cores (E.2 late-risk, E.3 retention flag, E.4 seller health), the supporting layers (E.5), the side alert (E.6), build order (E.7), then the deep-dive extensions (E.8).
 
-**F. Outreach Draft** (last page) — English message to Head of Operations requesting a 20-minute sense-check.
+**F. Outreach Draft** — English message to Head of Operations requesting a 20-minute sense-check.
+
+**H. LinkedIn Milestone Post** (last page) — public post documenting the case experience.
 
 Short on time? Read only: Executive Summary → C.5 register table → E.1 map → E.7 build order → F.
 
@@ -35,7 +37,7 @@ Words you'll see everywhere: `is_late` = delivered after ETA (`delta_days > 0`, 
 Follow the same order as the PDF:
 
 1. `outputs/HVIA_Olist_Business_Discovery_Report.pdf` — read first (above)
-2. `docs/definitions.md` — the numbers you can quote (late rule, bases, formulas); single source of truth
+2. `docs/01-definitions.md` — the numbers you can quote (late rule, bases, formulas); single source of truth
 3. `docs/` deep dives — one file per analysis: delivery stages, seller risk, category risk, cohorts, financial exposure (+ protection note)
 4. `outputs/charts/` + `outputs/tables/` — figures and CSVs behind the report; `outputs/README.md` maps each chart to its report section
 5. `notebooks/` — EDA notebook + script (same logic) if you want to reproduce or audit a number

@@ -1,7 +1,7 @@
 # Raw data — Olist Brazilian E-Commerce (9 tables)
 
 Source: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce (public release, 2018).
-Window in this extract: orders ~2016-09-04 → 2018-10-17. See `../docs/definitions.md` for window/truncation notes.
+Window in this extract: orders ~2016-09-04 → 2018-10-17. See `../docs/01-definitions.md` for window/truncation notes.
 
 Recoverable: if `archive/` is empty, run `python -c "import kagglehub; kagglehub.dataset_download('olistbr/brazilian-ecommerce')"` and copy the 9 CSVs here (requires `pip install kagglehub`).
 
@@ -19,6 +19,6 @@ Recoverable: if `archive/` is empty, run `python -c "import kagglehub; kagglehub
 | `olist_geolocation_dataset.csv` | 1,000,163 | ZIP → lat/lng (many rows per prefix; average before distance) |
 | `product_category_name_translation.csv` | 71 | PT → EN category names |
 
-Primary consumer: `../notebooks/olist_full_eda.py` (`DATA_PATH = ROOT / 'archive'`). Do not rename files without updating the notebook and `../docs/definitions.md`.
+Primary consumer: `../notebooks/olist_full_eda.py` (`DATA_PATH = ROOT / 'archive'`). Do not rename files without updating the notebook and `../docs/01-definitions.md`.
 
 Dataset license: CC BY-NC-SA 4.0 (see `../references/upstream-brazilian-ecommerce-analysis/`).

@@ -23,4 +23,4 @@
 | 23 financial exposure | Fig C.6 | C.6 late GMV |
 | 02–05, 07, 09, 11–15, 17 | supporting Task-1 story charts, kept for completeness |
 
-Locked: do not regenerate tables/charts casually — see `../docs/locked_outputs_protection.md`. Definitions: `../docs/definitions.md`.
+Locked: do not regenerate tables/charts casually — see `../docs/07-locked-outputs-protection.md`. Definitions: `../docs/01-definitions.md`.

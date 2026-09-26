@@ -20,7 +20,7 @@ class Doc(FPDF):
         self.cell(
             0,
             5,
-            "HVIA | Olist Business Discovery | Final - Integrated Tasks 1-6",
+            "HVIA | Olist Business Discovery | Final Report",
             new_x=XPos.LMARGIN,
             new_y=YPos.NEXT,
         )
@@ -270,7 +270,7 @@ def build():
     pdf.set_font("Helvetica", "", 8.5)
     pdf.multi_cell(
         0, 4.5,
-        "Olist Business Discovery  |  Final Integrated Report (Tasks 1-6)  |  A + B + C + E",
+        "Olist Business Discovery  |  Final Report  |  A + B + C + E + F + H",
         align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT,
     )
     pdf.set_y(28)
@@ -279,8 +279,8 @@ def build():
     pdf.set_text_color(90, 90, 90)
     pdf.multi_cell(
         0, 4.2,
-        "Reading path: A Company  ->  B Dataset  ->  C Analysis (evolved with Tasks 2-6)  ->  "
-        "E HVIA Solutions (+ E.8 extensions). Descriptive evidence only - no causal claims.",
+        "Reading path: A Company  ->  B Dataset  ->  C Analysis  ->  "
+        "E HVIA Solutions  ->  F Outreach  ->  H Post. Descriptive evidence only - no causal claims.",
         new_x=XPos.LMARGIN, new_y=YPos.NEXT,
     )
     pdf.ln(1)
@@ -519,9 +519,8 @@ def build():
     pdf.body(
         "Read as a sequence of associations: growth stress -> logistics and geography -> late deliveries -> "
         "review collapse and written complaints -> weak repeat purchase - amplified by a "
-        "concentrated seller base under one shared Olist face. Tasks 2-6 add stage timing, "
+        "concentrated seller base under one shared Olist face. The deep dives in docs/ add stage timing, "
         "seller/category concentration, cohort windows, and late-GMV exposure sizing. "
-        "Note: Task D is folded into C (no separate D section)."
     )
 
     pdf.h2("C.1 Growth co-occurred with operational pressure")
@@ -1205,13 +1204,29 @@ def build():
         "these match the operational reality you saw? Happy to share the one-page summary. Best, [Your Name]",
     )
 
+    pdf.h1("H. LinkedIn Milestone Post")
+    pdf.body(
+        "Public milestone post documenting the case experience. Mentions HVIA - Data & AI Solutions; "
+        "no brief content pasted."
+    )
+    pdf.callout(
+        "Draft post",
+        "Just wrapped a business-discovery case with HVIA - Data & AI Solutions on Olist's public "
+        "2016-2018 store orders (~99k). Two patterns stuck with me: only 6.8% of delivered orders arrived "
+        "after the ETA, yet average reviews fell from 4.29 to 2.27 when they did - and 96.9% of customers "
+        "bought exactly once. Turning those numbers into a story, then into focused responses (late-risk "
+        "scoring, seller health, first-order protection), taught me more about linking data to business "
+        "than any single chart. Tools: Python (pandas, matplotlib, seaborn), Jupyter. Full report in the "
+        "repo. #DataAnalytics #BusinessDiscovery",
+    )
+
     pdf.ln(2)
     pdf.set_font("Helvetica", "I", 8)
     pdf.set_text_color(100, 100, 100)
     pdf.multi_cell(
         0, 4,
-        "End of Final Integrated Report (A-B-C-E-F + Tasks 2-6 evidence; D folded into C). "
-        "Charts 01-23 with locked definitions appendix. Section F is the outreach draft; LinkedIn post remains pending.",
+        "End of Final Report (A-B-C-E-F-H with analysis deep dives). "
+        "Charts 01-23 with locked definitions appendix.",
         new_x=XPos.LMARGIN, new_y=YPos.NEXT,
     )
 

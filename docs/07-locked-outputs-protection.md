@@ -4,4 +4,4 @@ Tables in `outputs/tables/` and charts `outputs/charts/01–23` are **LOCKED** a
 
 Rule: before any rerun, back up `outputs/`. Overwrite a locked file only with an explicit, deliberate decision — never automatically.
 
-Locked numbers live in `docs/definitions.md` plus `docs/delivery_decomposition.md`, `docs/seller_risk.md`, `docs/category_risk.md`, `docs/cohort_retention.md`, `docs/financial_exposure.md`.
+Locked numbers live in `docs/01-definitions.md` plus `docs/02-delivery-decomposition.md`, `docs/03-seller-risk.md`, `docs/04-category-risk.md`, `docs/05-cohort-retention.md`, `docs/06-financial-exposure.md`.

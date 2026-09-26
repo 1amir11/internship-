@@ -5,6 +5,6 @@
 | `olist_full_eda.py` | Full pipeline, sections 1–18. Generates `../outputs/charts/` + prints business insights; sections 14–18 also write `../outputs/tables/` |
 | `olist_eda.ipynb` | Same logic in notebook form (run-all from repo root) |
 
-Both resolve data via `ROOT / 'archive'` (project root = parent of `notebooks/`). Formulas/grains follow `../docs/definitions.md`.
+Both resolve data via `ROOT / 'archive'` (project root = parent of `notebooks/`). Formulas/grains follow `../docs/01-definitions.md`.
 
-WARNING: sections 14–18 write locked Task 2–6 tables/charts. Before any rerun, read `../docs/locked_outputs_protection.md` and back up `../outputs/`.
+WARNING: sections 14–18 write locked Task 2–6 tables/charts. Before any rerun, read `../docs/07-locked-outputs-protection.md` and back up `../outputs/`.

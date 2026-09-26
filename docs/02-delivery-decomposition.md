@@ -1,6 +1,6 @@
 # Delivery Decomposition (Task 2)
 
-Order-level stage timing on the **locked delivered base** (`docs/definitions.md`: `order_status == 'delivered'` + both customer delivery and ETA non-null; **n = 96,470**). Late rule is **not** redefined: `is_late = delivery_delta_days > 0` (primary; calendar-day truncate).
+Order-level stage timing on the **locked delivered base** (`docs/01-definitions.md`: `order_status == 'delivered'` + both customer delivery and ETA non-null; **n = 96,470**). Late rule is **not** redefined: `is_late = delivery_delta_days > 0` (primary; calendar-day truncate).
 
 Code: `notebooks/olist_full_eda.py` → **SECTION 14: DELIVERY DECOMPOSITION**; mirrored in `notebooks/olist_eda.ipynb`.  
 Table: `outputs/tables/delivery_decomposition.csv` · Chart: `outputs/charts/19_delivery_stage_breakdown.png`.

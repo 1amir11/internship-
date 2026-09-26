@@ -1,6 +1,6 @@
 # Seller Concentration of Risk (Task 3)
 
-Seller-grain revenue concentration and late/review co-occurrence on the **locked** bases (`docs/definitions.md`). Late rule is **not** redefined: `is_late = delivery_delta_days > 0` on the delivered base (**n = 96,470**). Revenue ranking uses **`SUM(order_items.price)`** (product GMV ≈ **R$13.59M**).
+Seller-grain revenue concentration and late/review co-occurrence on the **locked** bases (`docs/01-definitions.md`). Late rule is **not** redefined: `is_late = delivery_delta_days > 0` on the delivered base (**n = 96,470**). Revenue ranking uses **`SUM(order_items.price)`** (product GMV ≈ **R$13.59M**).
 
 Code: `notebooks/olist_full_eda.py` → **SECTION 15: SELLER CONCENTRATION OF RISK**; mirrored in `notebooks/olist_eda.ipynb`.  
 Tables: `outputs/tables/seller_level.csv`, `outputs/tables/seller_decile_summary.csv` · Chart: `outputs/charts/20_seller_risk.png`.
@@ -54,7 +54,7 @@ Zero-delivered sellers (items exist but no delivered-base order): **125**.
 
 ## Locked Pareto check
 
-Equal to `docs/definitions.md` / SECTION 8:
+Equal to `docs/01-definitions.md` / SECTION 8:
 
 | Slice | Revenue share |
 |-------|--------------:|
@@ -187,4 +187,4 @@ Captions state grain, n, and correlational framing (no causality).
 - **Median late rate = 0** in lower deciles / low-volume bands is often a small-n artifact.
 - **Concentration ≠ efficiency:** top-decile GMV share does not prove elite sellers are more efficient, and the bottom half’s ~3.2% revenue share is not labeled “inefficient.”
 - **No causal / predictive claims** about sellers, carriers, or interventions; wording stays descriptive/correlational.
-- Task 2 delivery decomposition and `docs/definitions.md` remain locked and unchanged.
+- Task 2 delivery decomposition and `docs/01-definitions.md` remain locked and unchanged.

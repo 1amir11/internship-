@@ -1,6 +1,6 @@
 # Financial Exposure Scenarios (Task 6)
 
-Implied commission exposure under **unsourced** take-rate assumptions applied to locked product GMV bases (`docs/definitions.md`). Late rule is **not** redefined: `is_late = delivery_delta_days > 0` on the delivered base (**n = 96,470**; **6,534** late orders). Product GMV = **`SUM(order_items.price)`** = **R$13,591,643.70**.
+Implied commission exposure under **unsourced** take-rate assumptions applied to locked product GMV bases (`docs/01-definitions.md`). Late rule is **not** redefined: `is_late = delivery_delta_days > 0` on the delivered base (**n = 96,470**; **6,534** late orders). Product GMV = **`SUM(order_items.price)`** = **R$13,591,643.70**.
 
 **True 2016–18 marketplace take-rate is unverified.** Rates **15% / 19% / 21%** are scenario assumptions only — not facts. There is **no** “recoverable revenue” column.
 

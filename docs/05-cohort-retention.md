@@ -1,6 +1,6 @@
 # Cohort Retention Analysis (Task 5)
 
-Fixed-window cohort retention on **`customer_unique_id`** (customer grain). Does **not** redefine or replace the locked crude full-window one-time rate (**93,099 / 96,096 = 96.88%** — `docs/definitions.md`). Late / delivery / category / seller definitions remain locked.
+Fixed-window cohort retention on **`customer_unique_id`** (customer grain). Does **not** redefine or replace the locked crude full-window one-time rate (**93,099 / 96,096 = 96.88%** — `docs/01-definitions.md`). Late / delivery / category / seller definitions remain locked.
 
 Code: `notebooks/olist_full_eda.py` → **SECTION 17: COHORT RETENTION** (lines **1757–2073**); mirrored in `notebooks/olist_eda.ipynb` (cells **38–39**, after SECTION 16 cells 36–37).  
 Tables: `outputs/tables/cohort_monthly.csv`, `outputs/tables/cohort_customers.csv` · Chart: `outputs/charts/22_cohort_retention.png`.
@@ -117,7 +117,7 @@ Canceled / unavailable / invoiced / etc. first purchases are **included in prima
 | **Crude repeat (locked complement)** | **2,997 / 96,096** | **3.12%** | Full window | All 96,096 |
 | **H1-2017 cohort 12m repeat** | **666 / 14,239** | **4.68%** | Fixed 365 days from first purchase | **Eligible** H1 first-purchasers only |
 
-The crude **96.88% one-time / 3.12% repeat** figures remain the locked full-window facts (`docs/definitions.md`); they are **not** replaced. H1-2017 eligible customers show a **higher** 12m repeat rate (**4.68%**) than the crude full-window repeat (**3.12%**) — less alarming than reading “only 3.1% ever return” as a fixed-horizon loyalty rate — because (1) the cohort denominator is **eligible** first-purchasers with a full 365-day observation window (**14,239**), not all **96,096** (of whom **67,009** are right-censored with &lt;12m observability), and (2) the window is a **fixed 365 days** from first purchase rather than a variable span ending at 2018-10-17. Both numbers are valid for their stated grains; they answer different questions.
+The crude **96.88% one-time / 3.12% repeat** figures remain the locked full-window facts (`docs/01-definitions.md`); they are **not** replaced. H1-2017 eligible customers show a **higher** 12m repeat rate (**4.68%**) than the crude full-window repeat (**3.12%**) — less alarming than reading “only 3.1% ever return” as a fixed-horizon loyalty rate — because (1) the cohort denominator is **eligible** first-purchasers with a full 365-day observation window (**14,239**), not all **96,096** (of whom **67,009** are right-censored with &lt;12m observability), and (2) the window is a **fixed 365 days** from first purchase rather than a variable span ending at 2018-10-17. Both numbers are valid for their stated grains; they answer different questions.
 
 **Deltas (descriptive):** cohort 12m repeat − crude repeat ≈ **+1.56 pp**; crude one-time remains **96.88%** on the full-window denominator.
 
@@ -145,4 +145,4 @@ P2 is the loyalty / near-zero-repeat problem framed from the locked crude full-w
 - **Primary includes non-delivered** first purchases; delivered-only is sensitivity only.
 - **No imputation** of missing timestamps (purchase nulls = 0).
 - **Customer vs order grain:** do not divide orders by customers across grains without labeling.
-- Tasks 1–4 outputs and `docs/definitions.md` remain locked; crude **96.88%** is never overwritten.
+- Tasks 1–4 outputs and `docs/01-definitions.md` remain locked; crude **96.88%** is never overwritten.
