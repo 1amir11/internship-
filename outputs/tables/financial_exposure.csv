@@ -1,0 +1,36 @@
+slice,grain,n_items,n_orders,gmv_product,gmv_share,commission_15,commission_19,commission_21
+total_product_gmv,item (all items),112650,98666,13591643.7,1.0,2038746.55,2582412.3,2854245.18
+late_product_gmv,item (delivered; is_late broadcast),7264,6534,985924.34,0.072539,147888.65,187325.62,207044.11
+d1_late_gmv,item (D1 sellers × late orders),4508,4127,680097.81,0.050038,102014.67,129218.58,142820.54
+top30_late_seller_gmv,item (Task-3 top-30 late sellers × late),2177,1964,224401.75,0.01651,33660.26,42636.33,47124.37
+cat_top10_late_gmv,item (≥100 cats; top-10 by late GMV),4587,4122,637375.28,0.046895,95606.29,121101.3,133848.81
+cat_late_health_beauty,item (≥100 filter; late GMV),716,649,94273.39,0.006936,14141.01,17911.94,19797.41
+cat_late_watches_gifts,item (≥100 filter; late GMV),422,406,91298.05,0.006717,13694.71,17346.63,19172.59
+cat_late_bed_bath_table,item (≥100 filter; late GMV),770,689,79235.1,0.00583,11885.27,15054.67,16639.37
+cat_late_sports_leisure,item (≥100 filter; late GMV),532,495,70453.26,0.005184,10567.99,13386.12,14795.18
+cat_late_auto,item (≥100 filter; late GMV),291,278,66549.23,0.004896,9982.38,12644.35,13975.34
+cat_late_computers_accessories,item (≥100 filter; late GMV),496,417,61459.32,0.004522,9218.9,11677.27,12906.46
+cat_late_furniture_decor,item (≥100 filter; late GMV),574,449,58515.94,0.004305,8777.39,11118.03,12288.35
+cat_late_cool_stuff,item (≥100 filter; late GMV),217,210,39269.48,0.002889,5890.42,7461.2,8246.59
+cat_late_housewares,item (≥100 filter; late GMV),340,308,38465.31,0.00283,5769.8,7308.41,8077.72
+cat_late_baby,item (≥100 filter; late GMV),229,226,37856.2,0.002785,5678.43,7192.68,7949.8
+monthly_late_2017-01,item (purchase month; late GMV),24,22,3115.95,0.025899,467.39,592.03,654.35
+monthly_late_2017-02,item (purchase month; late GMV),58,49,6263.68,0.025328,939.55,1190.1,1315.37
+monthly_late_2017-03,item (purchase month; late GMV),136,116,16070.84,0.042931,2410.63,3053.46,3374.88
+monthly_late_2017-04,item (purchase month; late GMV),160,151,28172.07,0.078272,4225.81,5352.69,5916.13
+monthly_late_2017-05,item (purchase month; late GMV),128,106,14764.98,0.029176,2214.75,2805.35,3100.65
+monthly_late_2017-06,item (purchase month; late GMV),103,95,26442.62,0.061063,3966.39,5024.1,5552.95
+monthly_late_2017-07,item (purchase month; late GMV),133,108,18691.46,0.037531,2803.72,3551.38,3925.21
+monthly_late_2017-08,item (purchase month; late GMV),133,122,16639.93,0.028991,2495.99,3161.59,3494.39
+monthly_late_2017-09,item (purchase month; late GMV),208,182,26710.42,0.042778,4006.56,5074.98,5609.19
+monthly_late_2017-10,item (purchase month; late GMV),204,187,25773.67,0.038803,3866.05,4897.0,5412.47
+monthly_late_2017-11,item (purchase month; late GMV),1009,904,126218.09,0.124935,18932.71,23981.44,26505.8
+monthly_late_2017-12,item (purchase month; late GMV),452,411,77499.92,0.104179,11624.99,14724.98,16274.98
+monthly_late_2018-01,item (purchase month; late GMV),463,403,68787.49,0.072406,10318.12,13069.62,14445.37
+monthly_late_2018-02,item (purchase month; late GMV),1046,926,127034.06,0.150482,19055.11,24136.47,26677.15
+monthly_late_2018-03,item (purchase month; late GMV),1447,1328,187137.72,0.190333,28070.66,35556.17,39298.92
+monthly_late_2018-04,item (purchase month; late GMV),319,306,48351.92,0.048515,7252.79,9186.86,10153.9
+monthly_late_2018-05,item (purchase month; late GMV),495,443,66307.89,0.06654,9946.18,12598.5,13924.66
+monthly_late_2018-06,item (purchase month; late GMV),81,71,12801.79,0.014798,1920.27,2432.34,2688.38
+monthly_late_2018-07,item (purchase month; late GMV),228,208,36531.52,0.040794,5479.73,6940.99,7671.62
+monthly_late_2018-08,item (purchase month; late GMV),432,393,52302.45,0.061195,7845.37,9937.47,10983.51
