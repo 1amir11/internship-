@@ -41,8 +41,7 @@ Follow the same order as the PDF:
 3. `docs/` deep dives — one file per analysis: delivery stages, seller risk, category risk, cohorts, financial exposure (+ protection note)
 4. `outputs/charts/` + `outputs/tables/` — figures and CSVs behind the report; `outputs/README.md` maps each chart to its report section
 5. `notebooks/` — EDA notebook + script (same logic) if you want to reproduce or audit a number
-6. `scripts/build_report.py` — builds the PDF from the charts (one script)
-7. `archive/` — data dictionary only; raw CSVs download on demand (below)
+6. `archive/` — data dictionary only; raw CSVs download on demand (below)
 8. `references/` — upstream Kaggle notebook, attribution only
 
 ## Layout
@@ -51,7 +50,6 @@ Follow the same order as the PDF:
 outputs/HVIA_Olist_Business_Discovery_Report.pdf  # <-- main deliverable
 docs/          # definitions + analysis notes
 notebooks/     # EDA notebook + script (same logic)
-scripts/       # report builder (one script)
 archive/       # data dictionary only — CSVs download on demand
 references/    # upstream Kaggle notebook (attribution)
 ```

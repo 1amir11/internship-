@@ -2,7 +2,7 @@
 
 | Path | Content |
 |------|---------|
-| `HVIA_Olist_Business_Discovery_Report.pdf` | **Main deliverable** — final integrated report (A–C, E–F). Rebuild: `python scripts/build_report.py`. Reading guide in root `README.md` |
+| `HVIA_Olist_Business_Discovery_Report.pdf` | **Main deliverable** — final integrated report (A–C, E–F, H). Reading guide in root `README.md` |
 | `charts/` | 23 PNGs backing the report (map to report figures below) |
 | `tables/` | 7 CSVs from the analysis (delivery, seller, category, cohort, exposure) |
 
