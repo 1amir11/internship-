@@ -232,7 +232,9 @@ Peak **2017-11: 7,544** orders; YoY look huge partly from early-base effect. Pea
 
 # F. Outreach Draft
 
-*Todo — short LinkedIn message or email to a relevant Olist decision-maker.*
+*Recipient: Head of Operations / Marketplace at Olist. Channel: LinkedIn message or short email. Language: English.*
+
+> Hi [Name] — I'm an intern with HVIA – Data & AI Solutions. I spent the last weeks on Olist's public 2016–2018 store orders (~99k) and three patterns stood out: (1) only 6.8% of delivered orders arrive after the ETA, yet average reviews drop from 4.29 to 2.27 when they do; (2) 96.9% of customers buy exactly once; (3) the top 10% of sellers drive ~67.5% of product revenue. I sketched three focused responses — late-delivery risk scoring before the ETA is missed, a seller health score beyond GMV, and first-order retention flags. Would you be open to a 20-minute call next week to sense-check whether these match the operational reality you saw? Happy to share the one-page summary. Best, [Your Name]
 
 ---
 

@@ -19,6 +19,10 @@ Thumbs.db
 # Generated previews (regenerable from PDFs; not versioned)
 outputs/_pdf_preview/
 
+# Raw data (large ~140MB; download on demand, not versioned)
+archive/*.csv
+!archive/README.md
+
 # Local env / secrets
 .env
 *.log

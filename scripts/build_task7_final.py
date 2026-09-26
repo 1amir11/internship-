@@ -1189,13 +1189,29 @@ def build():
         "no web company source was opened for this pass."
     )
 
+    pdf.h1("F. Outreach Draft  |  Head of Operations / Marketplace")
+    pdf.body(
+        "Channel: LinkedIn message or short email. Purpose: request a 20-minute sense-check with an Olist "
+        "operations decision-maker. Numbers below are the locked descriptive findings from this report."
+    )
+    pdf.callout(
+        "Draft message",
+        "Hi [Name] - I'm an intern with HVIA - Data & AI Solutions. I spent the last weeks on Olist's public "
+        "2016-2018 store orders (~99k) and three patterns stood out: (1) only 6.8% of delivered orders arrive "
+        "after the ETA, yet average reviews drop from 4.29 to 2.27 when they do; (2) 96.9% of customers buy "
+        "exactly once; (3) the top 10% of sellers drive ~67.5% of product revenue. I sketched three focused "
+        "responses - late-delivery risk scoring before the ETA is missed, a seller health score beyond GMV, "
+        "and first-order retention flags. Would you be open to a 20-minute call next week to sense-check whether "
+        "these match the operational reality you saw? Happy to share the one-page summary. Best, [Your Name]",
+    )
+
     pdf.ln(2)
     pdf.set_font("Helvetica", "I", 8)
     pdf.set_text_color(100, 100, 100)
     pdf.multi_cell(
         0, 4,
-        "End of Final Integrated Report (A-B-C-E + Tasks 2-6 evidence; D folded into C). "
-        "Charts 01-23 with locked definitions appendix. Outreach draft (F) and LinkedIn post remain pending.",
+        "End of Final Integrated Report (A-B-C-E-F + Tasks 2-6 evidence; D folded into C). "
+        "Charts 01-23 with locked definitions appendix. Section F is the outreach draft; LinkedIn post remains pending.",
         new_x=XPos.LMARGIN, new_y=YPos.NEXT,
     )
 
