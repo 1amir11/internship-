@@ -40,7 +40,6 @@ Follow the same order as the PDF:
 4. `outputs/charts/` + `outputs/tables/` — figures and CSVs behind the report; `outputs/README.md` maps each chart to its report section
 5. `notebooks/` — EDA notebook + script (same logic) if you want to reproduce or audit a number
 6. `archive/` — data dictionary only; raw CSVs download on demand (below)
-8. `references/` — upstream Kaggle notebook, attribution only
 
 ## Layout
 
@@ -49,7 +48,6 @@ outputs/HVIA_Olist_Business_Discovery_Report.pdf  # <-- main deliverable
 docs/          # definitions + analysis notes
 notebooks/     # EDA notebook + script (same logic)
 archive/       # data dictionary only — CSVs download on demand
-references/    # upstream Kaggle notebook (attribution)
 ```
 
 ## Data (not in git)

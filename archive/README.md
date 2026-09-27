@@ -21,4 +21,4 @@ Recoverable: if `archive/` is empty, run `python -c "import kagglehub; kagglehub
 
 Primary consumer: `../notebooks/olist_full_eda.py` (`DATA_PATH = ROOT / 'archive'`). Do not rename files without updating the notebook and `../docs/01-definitions.md`.
 
-Dataset license: CC BY-NC-SA 4.0 (see `../references/upstream-brazilian-ecommerce-analysis/`).
+Dataset license: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/).
