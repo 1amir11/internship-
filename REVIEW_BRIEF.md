@@ -64,7 +64,7 @@ Deliberately removed (all in git history if needed): `tasks/` working notes, ext
 
 1. `docs/01-definitions.md` values == §3 table above
 2. CSV row counts after download: orders 99,441; items 112,650; customers 99,441
-3. PDF: 13 pages, 11 embedded figures, sections A–C/E–F, outreach signed "Amir", no `[Your Name]`/TODO/placeholder text, no LinkedIn section
+3. PDF: 13 pages, 11 embedded figures, sections A–C/E–F, outreach opening "Hi there" and signed "Amir", no bracket placeholders, TODOs, or LinkedIn section
 4. `outputs/charts/01–23` + `outputs/tables/` (7 files) present; chart→section map in `outputs/README.md`
 5. No stale references in code, docs, charts, or READMEs (retired names are documented only in §5 of this brief for recoverability)
 6. `notebooks/olist_eda.ipynb` is valid JSON; `notebooks/olist_full_eda.py` compiles; both resolve data via repo-relative `archive/` path
