@@ -4,7 +4,7 @@ Olist Brazilian e-commerce business discovery: research, data analysis, and HVIA
 
 ## Main file
 
-**`outputs/HVIA_Olist_Business_Discovery_Report.pdf`** (14 pages) — the whole case in one file.
+**`outputs/HVIA_Olist_Business_Discovery_Report.pdf`** (13 pages) — the whole case in one file.
 
 ## How to read the PDF (in order)
 
