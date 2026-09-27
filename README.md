@@ -24,9 +24,7 @@ Read it top to bottom — each section feeds the next: company → data → stor
 
 **E. Solution Proposal** — every solution starts from a Section C problem ("don't sell a tool"). Read the solution map (E.1), the three cores (E.2 late-risk, E.3 retention flag, E.4 seller health), the supporting layers (E.5), the side alert (E.6), build order (E.7), then the deep-dive extensions (E.8).
 
-**F. Outreach Draft** — English message to Head of Operations requesting a 20-minute sense-check.
-
-**H. LinkedIn Milestone Post** (last page) — public post documenting the case experience.
+**F. Outreach Draft** (last page) — English message to Head of Operations requesting a 20-minute sense-check, signed Amir.
 
 Short on time? Read only: Executive Summary → C.5 register table → E.1 map → E.7 build order → F.
 
